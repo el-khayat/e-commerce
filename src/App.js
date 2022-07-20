@@ -1,24 +1,26 @@
 import React from 'react';
 import {BrowserRouter as Router ,Route,Routes } from 'react-router-dom'
- import HomePage from './pages/HomePage';
-
-
+import HomePage from './pages/HomePage/HomePage';
+import ShopPage from './pages/Shop/Shop';
+import Header from './components/Header/Header';
+import './App.scss'
 
 const  App  = () => {
 
-  const Hats = ()=>{
-    return <h1> helo from hats</h1>
-  }
+
 
     return (
+      <>
       <Router >
+      <Header/>
         <Routes>
           <Route exact path='/' element={<HomePage /> } />
-          <Route exact path='/hats' element={<Hats /> } />
+          <Route exact path='/shop' element={<ShopPage /> } />
                   
         
         </Routes>
       </Router>
+      </>
     );
 
 }

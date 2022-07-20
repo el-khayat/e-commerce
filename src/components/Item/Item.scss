@@ -1,0 +1,59 @@
+.item{
+    width: 260px;
+    height: 380px;
+    position: relative;
+    margin: 20px;
+    margin-top: 0px;
+    cursor: pointer;
+
+    &:hover{
+
+        .back-ground .btn{
+            opacity: 0.6;
+            transition: all 0.8s ;
+        }
+    }
+
+
+
+
+    
+   .back-ground{
+    background-size: cover;
+    width: 100%;
+    height: 95%;
+
+   
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    
+    .btn{
+        width: 70%;
+        height: 60px;
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        opacity: 0.6;
+        border-radius: 4px;
+        background-color: #fff;
+        align-items: center;
+        position: absolute;
+        bottom: 50px;
+        opacity: 0;
+
+
+    }
+   }
+    .itemName{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }    
+    .itemPrice{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
