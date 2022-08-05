@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link,useNavigate  } from 'react-router-dom';
+import { useNavigate  } from 'react-router-dom';
 
 import './MenuItem.scss';
 
@@ -9,7 +9,7 @@ const MenuItem = ({ title, imageUrl, size,url }) =>{
   return(
 
   
-    <div className={`${size} menu-item`} onClick={()=> navigate(url)}  >
+    <div className={`${size} menu-item`} onClick={()=> navigate(`/shop${url}`)}  >
     <div
       className='background-image'
       style={{
@@ -17,7 +17,7 @@ const MenuItem = ({ title, imageUrl, size,url }) =>{
       }}
       />
     <div className='content'>
-
+ 
       <h1 className='title'>{title.toUpperCase()}</h1>
       <span className='subtitle'>SHOP NOW</span>
 

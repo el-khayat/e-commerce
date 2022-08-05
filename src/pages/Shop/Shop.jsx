@@ -1,20 +1,7 @@
 import React from "react";
 import './Shop.scss';
-import CollectionPreview from '../../components/CollectionPreview/CollectionPreview'
-import {SHOP_DATA} from '../../data';
+import Shop from "../../components/Shop/Shop";
 
-const Shop = ()=>{
+const ShopPage = ()=> (<Shop/>);
 
-const collections = SHOP_DATA
-    return (
-  <div> 
-   {
-    collections.map(({id,...otherCollectionProps})=>{
-      return <CollectionPreview key={id} {...otherCollectionProps} />
-    })
-   } 
-     </div>
-
-    );
-} 
-export default Shop ;
+export default ShopPage ;

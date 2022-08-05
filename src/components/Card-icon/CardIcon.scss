@@ -1,0 +1,25 @@
+.container-bag-icon {
+
+    // background-color: red;
+    position: relative;
+    width: 30px;
+    height: 30px;
+
+
+    .bag-icon {
+        position: absolute;
+        height: 1.3em;
+    }
+
+    .number {
+        position: absolute;
+        left: 50%;
+        top: 65%;
+        transform: translate(-50%, -50%);
+        font-size: 18px;
+
+
+    }
+
+
+}

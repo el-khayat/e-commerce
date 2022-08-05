@@ -17,9 +17,9 @@ const navigate = useNavigate();
 
         {
             items.filter((item,idx)=> idx < 4 )
-            .map(({id,...other})=>{
+            .map((item)=>{
                 return(
-                    <Item key={id} {...other}/> 
+                    <Item key={item.id} item={item}/> 
                     )
                 })
                 

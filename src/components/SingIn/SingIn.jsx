@@ -1,4 +1,8 @@
 import React ,{useState} from 'react'
+import FormInput from '../form-input/FormInput'
+import FormButon from '../form-butom/FormButon'
+import './SingIn.scss' ;
+import { singInWithGoogle,loginWithEmailAndPassword } from '../../firebase/firebase-utils'
 
 const SingIn = () => {
 
@@ -11,37 +15,61 @@ const SingIn = () => {
     const handelChangePassword = (event)=>{
         setPassword(event.target.value);
     }
-    const handelSubmit = event =>{
+    const handelSubmit =async event =>{
+
         event.preventDefault();
         console.log("Email : ",email);
         console.log("Password : ",password);
+
+        try {
+           await  loginWithEmailAndPassword(email,password)
+        } catch (error) {
+            console.log("error on login wuth email and password ",error);
+        }
+
+
+
         setEmail("");
-        setPassword("");
+       setPassword("");
     }
 
   return (
     <div className='singin'>
 
-    <h2> I aredy have an acount </h2>
+    <h2 className="title"> I aredy have an acount </h2>
     <span> sing in with your email and password  </span>
     <form onSubmit={handelSubmit}>
 
-        <input 
+        <FormInput 
         type="email" 
         name="" 
         id="email"
         value={email}
         onChange={handelChangeEmail} 
+        label="email"
         />
- <label htmlFor="email">email</label>
-        <input 
+
+        <FormInput 
         type="password" 
         name="" 
         id="password"
         value={password}
+        label="password"
+        
         onChange={handelChangePassword}  />
-        <label htmlFor="password">password</label>
-        <input type="submit" value="singin"  />
+        
+        
+
+
+        <div className="buttons">
+            <FormButon type="submit" > 
+                Sing in
+            </FormButon>
+
+            <FormButon onClick={singInWithGoogle} isGoogle > 
+                 With Google
+            </FormButon>
+        </div>
     </form>
     </div>
   )

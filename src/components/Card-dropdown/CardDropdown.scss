@@ -1,0 +1,33 @@
+.card-dropdown {
+
+    width: 260px;
+    height: 400px;
+    position: absolute;
+    background-color: #fff;
+    right: 130px;
+    top: 110px;
+    z-index: +2;
+    border: 1px solid black;
+
+
+
+
+
+
+    .no-item {
+        margin: 40px auto;
+    }
+
+    .catd-items {
+        display: flex;
+        flex-direction: column;
+        height: 83%;
+        width: 95%;
+        margin: auto;
+        overflow-y: auto;
+    }
+
+    button {
+        margin-bottom: 0;
+    }
+}

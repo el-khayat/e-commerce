@@ -8,9 +8,13 @@
 
     &:hover{
 
+    .back-ground {
+            opacity: 0.8;
+        }
         .back-ground .btn{
-            opacity: 0.6;
+            opacity: 0.8;
             transition: all 0.8s ;
+        
         }
     }
 
@@ -42,6 +46,11 @@
         position: absolute;
         bottom: 50px;
         opacity: 0;
+        &:hover {
+                background-color: #000;
+                color: #fff;
+                transition: 0.1s;
+            }
 
 
     }

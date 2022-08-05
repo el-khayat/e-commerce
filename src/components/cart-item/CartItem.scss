@@ -1,0 +1,39 @@
+.cart-item {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+
+
+    .image-item {
+        height: 100%;
+        width: 70px;
+        margin: 5px;
+
+        img {
+            height: 120px;
+            width: 80px;
+        }
+
+    }
+
+    .detailes-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        .name {
+            margin: 5px 5px;
+        }
+
+        .price {
+
+            margin: 5px 5px;
+        }
+    }
+}
